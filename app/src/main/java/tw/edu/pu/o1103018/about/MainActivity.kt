@@ -2,6 +2,7 @@ package tw.edu.pu.o1103018.about
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.MotionEvent
 import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
@@ -21,4 +22,11 @@ class MainActivity : AppCompatActivity() {
             }
         })
     }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        var txv:TextView = findViewById(R.id.txv)
+        txv.text = "熒幕觸控"
+        return true
+    }
+
 }
